@@ -53,6 +53,8 @@ android_test {
         "libstaticjvmtiagent",
     ],
 
+    certificate: "bluetooth",
+
     min_sdk_version: "Tiramisu",
 
     test_suites: [
