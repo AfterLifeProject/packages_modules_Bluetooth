@@ -88,14 +88,14 @@ inline std::string bta_dm_event_text(const tBTA_DM_EVT& event) {
   }
 }
 
-/* data type for BTA_DM_API_SEARCH_EVT */
+/* data type for BTA_DM_API_SEARCH_EVT and BTA_DM_API_QUEUE_SEARCH_EVT */
 typedef struct {
   BT_HDR_RIGID hdr;
   tBTA_SERVICE_MASK services;
   tBTA_DM_SEARCH_CBACK* p_cback;
 } tBTA_DM_API_SEARCH;
 
-/* data type for BTA_DM_API_DISCOVER_EVT */
+/* data type for BTA_DM_API_DISCOVER_EVT and BTA_DM_API_QUEUE_DISCOVER_EVT */
 typedef struct {
   BT_HDR_RIGID hdr;
   RawAddress bd_addr;

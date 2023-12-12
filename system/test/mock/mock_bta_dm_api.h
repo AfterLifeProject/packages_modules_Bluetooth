@@ -280,7 +280,7 @@ extern struct BTA_DmConfirm BTA_DmConfirm;
 
 // Name: BTA_DmDiscover
 // Params: const RawAddress& bd_addr, tBTA_DM_SEARCH_CBACK* p_cback,
-// tBT_TRANSPORT transport Return: void
+// tBT_TRANSPORT transport, bool is_bonding_or_sd Return: void
 struct BTA_DmDiscover {
   std::function<void(const RawAddress& bd_addr, tBTA_DM_SEARCH_CBACK* p_cback,
                      tBT_TRANSPORT transport)>
@@ -340,7 +340,7 @@ struct BTA_DmRemoveDevice {
 extern struct BTA_DmRemoveDevice BTA_DmRemoveDevice;
 
 // Name: BTA_DmSearch
-// Params: tBTA_DM_SEARCH_CBACK* p_cback
+// Params: tBTA_DM_SEARCH_CBACK* p_cback, bool is_bonding_or_sdp
 // Return: void
 struct BTA_DmSearch {
   std::function<void(tBTA_DM_SEARCH_CBACK* p_cback)> body{
