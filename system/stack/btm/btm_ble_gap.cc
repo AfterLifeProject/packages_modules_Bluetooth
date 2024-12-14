@@ -738,6 +738,7 @@ static void btm_ble_vendor_capability_vsc_cmpl_cback(
      * If the device has a BT firmware that advertises compliance with Marshmallow
      * LE capabilities but fails to pass the minimum expected response length, skip
      * checking its reported response length against the minimum expected by M_RELEASE
+     * if said device is known to have Bluetooth working again by simply skipping past
      * this, and has the respective system property set.
      */
     if (!property_get_bool("bluetooth.device.m_rsplen_workaround", false)) {
